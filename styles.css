@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+}
+
+#game-container {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: white;
+}
+
+#bucket {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#startButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 5px;
+    border: 4px solid black;
+    cursor: pointer;
+    user-select: none;
+}
+
+#numbers {
+    position: absolute;
+}
+
+.number {
+    position: absolute;
+    font-size: 36px;
+    user-select: none;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    border: 4px solid red;
+    padding: 5px;
+    user-select: none;
+}
+
+@media screen and (max-width: 1024px) {
+    #game-container {
+        width: 100%;
+    }
+    
+}
+
+/* Media query for screens narrower than 768px (typical tablet size) */
+@media screen and (max-width: 768px) {
+    #bucket {
+        width: 80px;
+        height: 80px;
+    }
+
+    .number {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+}
+
+/* Media query for screens narrower than 480px (typical mobile size) */
+@media screen and (max-width: 480px) {
+    #bucket {
+        width: 60px;
+        height: 60px;
+    }
+
+    .number {
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+    }
+}
